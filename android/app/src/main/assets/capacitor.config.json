@@ -1,0 +1,12 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "photo-gallery",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "windowsAndroidStudioPath": "D:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe",
+  "server": {
+    "url": "http://192.168.178.46:8100"
+  }
+}
