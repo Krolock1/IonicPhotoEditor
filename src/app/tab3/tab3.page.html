@@ -6,7 +6,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content *ngIf="gigs">
-  <ion-list>
-    <tf-gig *ngFor="let gig of gigs" [gig]="gig"> </tf-gig>
-  </ion-list>
+  <tf-gig
+    *ngFor="let gig of gigs"
+    [gig]="gig"
+    (detailsOpened)="onDetailsOpened($event)"
+    [showDetails]="gig.id === activeGigId"
+  >
+  </tf-gig>
 </ion-content>

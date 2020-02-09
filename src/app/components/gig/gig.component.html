@@ -1,6 +1,21 @@
-<ion-item>
-  <ion-label (click)="openGigPopover($event)">
-    <h2>{{ gig.locator }}</h2>
-    <h3>{{ gig.start | date: "EEEE dd.MM.yy hh:mm" }}</h3>
-  </ion-label>
-</ion-item>
+<ion-card>
+  <ion-card-header>
+    <ion-label (click)="toggleDetails()">
+      <h2>{{ gig.locator }}</h2>
+      <h3>Auftrittszeit {{ gig.start | date: "EEEE dd.MM.yy HH:mm" }}</h3>
+    </ion-label>
+  </ion-card-header>
+  <ion-card-content *ngIf="showDetails">
+    <ion-item lines="none">
+      <ion-chip>
+        <ion-icon name="locate"></ion-icon>
+        <ion-label>Ort: {{ gig.location }}</ion-label>
+      </ion-chip>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label
+        >Treffen: {{ gig.meeting | date: "EEEE dd.MM.yy HH:mm" }}</ion-label
+      >
+    </ion-item>
+  </ion-card-content>
+</ion-card>

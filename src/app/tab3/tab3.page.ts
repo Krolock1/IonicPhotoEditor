@@ -10,8 +10,14 @@ import { Gig } from "../model/gig";
 export class Tab3Page implements OnInit {
   constructor(private gigService: GigService) {}
   private gigs: Gig[];
+  private activeGigId: number;
 
   ngOnInit(): void {
     this.gigs = this.gigService.loadGigs();
+  }
+
+  onDetailsOpened(gigId: number) {
+    console.log(`gig ${gigId} is open`);
+    this.activeGigId = gigId;
   }
 }

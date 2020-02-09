@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { Gig } from "../../model/gig";
 import { PopoverController } from "@ionic/angular";
-import { GigPopoverComponent } from "../gig-popover/gig-popover.component";
 
 @Component({
   selector: "tf-gig",
@@ -10,17 +9,14 @@ import { GigPopoverComponent } from "../gig-popover/gig-popover.component";
 })
 export class GigComponent {
   constructor(private popoverController: PopoverController) {}
-
+  @Input() showDetails = false;
   @Input() gig: Gig;
+  @Output() detailsOpened = new EventEmitter<number>();
 
-  async openGigPopover(ev: any) {
-    console.log("popover starts");
-    const popover = await this.popoverController.create({
-      component: GigPopoverComponent,
-      componentProps: { gig: this.gig },
-      event: ev,
-      translucent: true
-    });
-    return await popover.present();
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+    if (this.showDetails) {
+      this.detailsOpened.emit(this.gig.id);
+    }
   }
 }

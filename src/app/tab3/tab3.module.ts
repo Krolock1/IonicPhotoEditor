@@ -5,7 +5,6 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { Tab3Page } from "./tab3.page";
 import { GigComponent } from "../components/gig/gig.component";
-import { GigPopoverComponent } from "../components/gig-popover/gig-popover.component";
 
 @NgModule({
   imports: [
@@ -14,7 +13,7 @@ import { GigPopoverComponent } from "../components/gig-popover/gig-popover.compo
     FormsModule,
     RouterModule.forChild([{ path: "", component: Tab3Page }])
   ],
-  declarations: [Tab3Page, GigComponent, GigPopoverComponent],
-  entryComponents: [GigPopoverComponent]
+  declarations: [Tab3Page, GigComponent],
+  entryComponents: []
 })
 export class Tab3PageModule {}
