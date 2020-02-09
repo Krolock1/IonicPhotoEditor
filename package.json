@@ -1,11 +1,11 @@
 {
-  "name": "photo-gallery",
+  "name": "tanzfanterie",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Markus Walgenbach",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ionic serve --no-open",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
