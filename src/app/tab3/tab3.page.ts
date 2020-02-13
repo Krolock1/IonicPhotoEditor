@@ -12,8 +12,10 @@ export class Tab3Page implements OnInit {
   private gigs: Gig[];
   private activeGigId: number;
 
-  ngOnInit(): void {
-    this.gigs = this.gigService.loadGigs();
+  async ngOnInit(): Promise<void> {
+    console.log("start on init");
+    this.gigs = await this.gigService.loadGigs();
+    console.log(`load ${this.gigs.length} gigs`);
   }
 
   onDetailsOpened(gigId: number) {

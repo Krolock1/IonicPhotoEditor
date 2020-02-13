@@ -7,9 +7,12 @@
   </ion-card-header>
   <ion-card-content *ngIf="showDetails">
     <ion-item lines="none">
+      Ort:
       <ion-chip>
         <ion-icon name="locate"></ion-icon>
-        <ion-label>Ort: {{ gig.location }}</ion-label>
+        <ion-label (click)="openNavigationApp()">
+          {{ gig.location.address }}
+        </ion-label>
       </ion-chip>
     </ion-item>
     <ion-item lines="none">

@@ -1,0 +1,5 @@
+gigs via rest laden
+websocket Kommunikation
+Gig anlegen
+Gig updaten
+Rechtesystem / login

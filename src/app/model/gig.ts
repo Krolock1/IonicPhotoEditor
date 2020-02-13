@@ -1,11 +1,11 @@
-import { Coordinate } from "./coordinate";
+import { Location } from "./Location";
 
 export interface Gig {
   id: number;
+  name: string;
   start: Date;
   meeting?: Date;
-  location: string;
-  locator: string;
-  coordinate?: Coordinate;
+  location: Location;
+  locator?: string;
   comment?: string;
 }
