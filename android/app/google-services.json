@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1064102033957",
+    "firebase_url": "https://tanzfanterie.firebaseio.com",
+    "project_id": "tanzfanterie",
+    "storage_bucket": "tanzfanterie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064102033957:android:d4896e2d1453957d0e5dcc",
+        "android_client_info": {
+          "package_name": "de.tanzfanterie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064102033957-l1e36qfc0trn5hu50o9ktam2a8j7p28g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBelFfOcRJj95FCkmN_eHiJRe5bP_II_AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064102033957-l1e36qfc0trn5hu50o9ktam2a8j7p28g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

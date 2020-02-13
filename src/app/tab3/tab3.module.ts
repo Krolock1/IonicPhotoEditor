@@ -5,6 +5,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { Tab3Page } from "./tab3.page";
 import { GigComponent } from "../components/gig/gig.component";
+import { GigListComponent } from "../components/gig-list/gig-list.component";
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { GigComponent } from "../components/gig/gig.component";
     FormsModule,
     RouterModule.forChild([{ path: "", component: Tab3Page }])
   ],
-  declarations: [Tab3Page, GigComponent],
+  declarations: [Tab3Page, GigComponent, GigListComponent],
   entryComponents: []
 })
 export class Tab3PageModule {}

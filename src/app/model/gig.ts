@@ -1,7 +1,7 @@
 import { Location } from "./Location";
 
 export interface Gig {
-  id: number;
+  _id: string;
   name: string;
   start: Date;
   meeting?: Date;

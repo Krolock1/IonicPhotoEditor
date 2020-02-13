@@ -14,12 +14,13 @@ export class GigComponent {
   ) {}
   @Input() showDetails = false;
   @Input() gig: Gig;
-  @Output() detailsOpened = new EventEmitter<number>();
+  @Output() detailsOpened = new EventEmitter<string>();
+  @Output() deleteGig = new EventEmitter<string>();
 
   toggleDetails() {
     this.showDetails = !this.showDetails;
     if (this.showDetails) {
-      this.detailsOpened.emit(this.gig.id);
+      this.detailsOpened.emit(this.gig._id);
     }
   }
 
@@ -40,5 +41,10 @@ export class GigComponent {
       const label = encodeURI(this.gig.location.address);
       window.open(`geo:0,0?q=${destination}(${label})`, "_system");
     }
+  }
+
+  delete() {
+    console.log("start to delete gig " + this.gig._id);
+    this.deleteGig.emit(this.gig._id);
   }
 }
